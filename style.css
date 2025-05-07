@@ -457,9 +457,8 @@ li {
 }
 
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  display: flex;
+  gap: 1rem;
 }
 
 .column {
@@ -469,14 +468,7 @@ li {
 
 .column img {
   width: 100%;
-  height: auto;
+  height: 100%;
   border-radius: 8px;
   display: block;
-  max-width: 100%;
-}
-
-@media (min-width: 768px) {
-  .gallery {
-      grid-template-columns: repeat(4, 1fr);
-  }
 }
