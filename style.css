@@ -291,6 +291,11 @@ body {
   overflow-y: scroll;
 }
 
+img{
+  width: 12em;
+  margin: 1rem;
+}
+
 h1,
 h2,
 p,
@@ -313,6 +318,7 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   font-size: 1.5em;
   text-align: center;
   position: relative;
@@ -376,7 +382,7 @@ li {
   background-image: var(--gradient-purple-haze);
 }
 .panel.green {
-  background-color: #28a92b;
+  background-color: #66A143;
   background-image: var(--gradient-macha);
 }
 
