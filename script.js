@@ -18,34 +18,60 @@ gsap.set(".panel", {zIndex: (i, target, targets) => targets.length - i});
 
 // Pelegrinos
 
-    function atualizarDias() {
-      const dataInicial = new Date(2022, 6, 1); // Julho = 6
-      const dataAtual = new Date();
-      const diferencaMs = dataAtual - dataInicial;
-      const diasPassados = Math.floor(diferencaMs / (1000 * 60 * 60 * 24));
-      document.getElementById('dias-passados').textContent = diasPassados;
-    }
+{
+  function atualizarTempo() {
+    const dataInicial = new Date(2022, 6, 7, 21, 2);
+    const agora = new Date();
 
-    // Função para atualizar o relógio
-    function atualizarRelogio() {
-      const agora = new Date();
-      let horas = agora.getHours();
-      let minutos = agora.getMinutes();
-      let segundos = agora.getSeconds();
+    let diferencaMs = agora - dataInicial;
 
-      // Adicionar zero à esquerda se necessário
-      horas = horas < 10 ? '0' + horas : horas;
-      minutos = minutos < 10 ? '0' + minutos : minutos;
-      segundos = segundos < 10 ? '0' + segundos : segundos;
+    const segundosTotais = Math.floor(diferencaMs / 1000);
+    const dias = Math.floor(segundosTotais / (60 * 60 * 24));
 
-      const horarioFormatado = `${horas}:${minutos}:${segundos}`;
-      document.getElementById('pelegrinos-hora').textContent = horarioFormatado;
-    }
+    const restanteSegundos = segundosTotais % (60 * 60 * 24);
+    const horas = Math.floor(restanteSegundos / 3600);
+    const minutos = Math.floor((restanteSegundos % 3600) / 60);
+    const segundos = restanteSegundos % 60;
 
-    // Inicializar os valores
-    atualizarDias();
-    atualizarRelogio();
+    const tempoFormatado = `${dias} dias, ` +
+                           `${horas.toString().padStart(2, '0')} horas, ` +
+                           `${minutos.toString().padStart(2, '0')} minutos, ` +
+                           `${segundos.toString().padStart(2, '0')} segundos`;
 
-    // Atualizar o relógio a cada segundo
-    setInterval(atualizarRelogio, 1000);
+    document.getElementById('pelegrinos-tempo').textContent = tempoFormatado;
+  }
+
+  atualizarTempo();
+  setInterval(atualizarTempo, 1000);
     
+  }
+
+  // Academia
+
+{
+  function atualizarTempo() {
+    const dataInicial = new Date(2023, 0, 7, 14, 32); // Janeiro = 0
+    const agora = new Date();
+
+    let diferencaMs = agora - dataInicial;
+
+    const segundosTotais = Math.floor(diferencaMs / 1000);
+    const dias = Math.floor(segundosTotais / (60 * 60 * 24));
+
+    const restanteSegundos = segundosTotais % (60 * 60 * 24);
+    const horas = Math.floor(restanteSegundos / 3600);
+    const minutos = Math.floor((restanteSegundos % 3600) / 60);
+    const segundos = restanteSegundos % 60;
+
+    const tempoFormatado = `${dias} dias, ` +
+                           `${horas.toString().padStart(2, '0')} horas, ` +
+                           `${minutos.toString().padStart(2, '0')} minutos, ` +
+                           `${segundos.toString().padStart(2, '0')} segundos`;
+
+    document.getElementById('academia-dias').textContent = tempoFormatado;
+  }
+
+  atualizarTempo();
+  setInterval(atualizarTempo, 1000);
+  
+}
