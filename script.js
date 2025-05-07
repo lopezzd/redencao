@@ -78,7 +78,7 @@ gsap.set(".panel", {zIndex: (i, target, targets) => targets.length - i});
 
 {
   function atualizarTempo() {
-    const dataInicial = new Date(2023, 0, 7, 14, 32); // Janeiro = 0
+    const dataInicial = new Date(2024, 9, 19, 10, 30); // Janeiro = 0
     const agora = new Date();
 
     let diferencaMs = agora - dataInicial;
