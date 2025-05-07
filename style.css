@@ -455,3 +455,28 @@ li {
   margin: 0 auto;
   text-align: center;
 }
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.column {
+  display: grid;
+  gap: 16px;
+}
+
+.column img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .gallery {
+      grid-template-columns: repeat(4, 1fr);
+  }
+}
