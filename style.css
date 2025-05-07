@@ -322,12 +322,9 @@ li {
   flex-direction: column;
   font-size: 1.5em;
   text-align: center;
-  position: relative;
   box-sizing: border-box;
   padding-block: 3rem;
   color: var(--color-just-black);
-  position: absolute;
-  will-change: transform;
   min-height: 100vh;
   padding-inline: 2rem;
 }
