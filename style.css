@@ -276,21 +276,9 @@ body {
   margin: 0;
   font-size: var(--step-0);
   line-height: 1.45;
+  min-height: 100vh;
 }
 
-html,
-body {
-  margin: 0;
-  height: 100%;
-  -webkit-overflow-scrolling: touch;
-  overflow-scrolling: touch;
-}
-
-body {
-  overflow-x: hidden;
-  overflow-y: scroll;
-  background-color: red;
-}
 
 img{
   width: 12em;
@@ -304,14 +292,7 @@ li {
   max-width: 800px;
 }
 
-#container {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-}
+
 
 .panel {
   width: 100%;
