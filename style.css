@@ -1,29 +1,7 @@
-@font-face {
-  font-display: block;
-  font-family: Mori;
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://assets.codepen.io/16327/PPMori-Regular.woff) format("woff");
-}
-
-@font-face {
-  font-display: block;
-  font-family: Mori;
-  font-style: normal;
-  font-weight: 600;
-  src: url(https://assets.codepen.io/16327/PPMori-SemiBold.woff) format("woff");
-}
-
-@font-face {
-  font-display: block;
-  font-family: Fraktion Mono;
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://assets.codepen.io/16327/PPFraktionMono-Bold.woff)
-    format("woff");
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
 :root {
+  --font-roboto: "Roboto", sans-serif;
   --color-shockingly-green: #0ae448;
   --color-just-black: #0e100f;
   --color-surface-white: #fffce1;
@@ -293,7 +271,7 @@
 body {
   color: var(--color-surface-white);
   background-color: var(--dark);
-  font-family: Mori, sans-serif;
+  font-family: var(--font-roboto);
   font-weight: 400;
   margin: 0;
   font-size: var(--step-0);
@@ -355,7 +333,7 @@ li {
 .panel h1 {
   font-size: 6em;
   color: var(--color-just-black);
-  font-weight: 300;
+  font-weight: 500;
   margin: 0 auto;
 }
 .panel.description {
@@ -364,9 +342,9 @@ li {
 .panel p,
 .panel li {
   color: var(--color-just-black);
-  font-weight: 300;
+  font-weight: 400;
   text-align: left;
-  font-size: 0.8em;
+  font-size: 2em;
   line-height: 1.5em;
   margin: 0.3em 0 1em 0;
 }
